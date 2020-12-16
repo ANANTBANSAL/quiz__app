@@ -18,12 +18,53 @@ class _splashScreenState extends State<splashScreen> {
           Icon(Icons.stop) ,
           Icon(Icons.circle,size: 16),
           Transform.rotate(angle:332.5,origin: const Offset(0,0),child:Icon(Icons.play_arrow) ,)
-          ,
-
         ],
+      ),
+      body:Container(
+          child:SafeArea(
+             child: Stack(
+              children:[
 
+                Column(
+        children: [
+                  SizedBox(
+                    height: deviceSize.height*.15,
+                  ),
+                   Container(
+                     child:Row(
+                         children:[Text('HELLO',
+                                                textAlign:TextAlign.start,
+                                                style: TextStyle(
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize: 60
+                                                )),
+                                            ]
+                                        ),),
+                  Container(
+                    child:Row(
+                                      children:  [Text('Welcome To Exam System',
+                                          textAlign:TextAlign.start,
+                                          style: TextStyle(
+                                              fontWeight: FontWeight. w100,
+                                              fontSize: 30
+                                          )),
+                                      ]
+                                  ),),
+    ]
       ),
 
+                Positioned(
+                   bottom:0,
+                    left:0,
+                    child:Container(
+                      height: deviceSize.height*.1,
+                      width: deviceSize.width,
+                      color:Colors.blueGrey,
+                    )
+                ),
+    ]  )
+    )
+    )
     );
   }
 }
